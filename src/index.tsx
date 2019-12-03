@@ -6,7 +6,6 @@ import { ConnectedRouter } from 'connected-react-router'
 import history from './history';
 import store from './store';
 import App from './App';
-import './stylesheets/app.scss';
 
 render(
     <Provider store={store}>

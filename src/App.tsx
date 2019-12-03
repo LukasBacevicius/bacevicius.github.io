@@ -3,10 +3,12 @@ import { Route, Switch } from 'react-router';
 import { useSelector, useDispatch } from 'react-redux';
 import { ThemeProvider } from 'styled-components';
 import { createGlobalStyle } from 'styled-components';
+import { Reset } from 'styled-reset'
 import theme from './theme';
 import { stateProps } from './reducers';
 import { isDarkMode } from './utils/theme';
 import { setMode } from './actions/theme';
+import Main from './containers/Main';
 import { LightsOff } from './components/LightsOff';
 
 const GlobalStyles = createGlobalStyle`
@@ -26,13 +28,14 @@ const App: FC = () => {
   return (
     <ThemeProvider theme={theme(mode)}>
       <>
+        <Reset />
         <GlobalStyles />
-        <LightsOff 
+        <LightsOff
           checked={isDarkMode(mode)}
           onClick={() => dispatch(setMode())}
         />
         <Switch>
-          <Route path="/" render={() => ''} />
+          <Route path="/" component={Main} />
         </Switch>
       </>
     </ThemeProvider>

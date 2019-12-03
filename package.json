@@ -27,6 +27,7 @@
     "redux-saga": "^1.1.1",
     "styled-components": "^4.4.0",
     "styled-components-breakpoint": "^2.1.1",
+    "styled-reset": "^4.0.8",
     "styled-typography": "^1.0.1",
     "typescript": "3.6.4"
   },
