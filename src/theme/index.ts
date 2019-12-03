@@ -1,10 +1,11 @@
 import colors from './colors';
+import awesomegrid from './grid';
 
 export default (mode: string = 'dark') => {
     return {
         colors,
         //@ts-ignore
-        color: (name: string, tint: string = '100'): string | undefined => colors[name][mode][tint],
+        color: (name: string, tint: number = 100): string | undefined => colors[name][mode][tint],
         setDimensions: (width: string, height: string = width) => `
             width: ${width};
             height: ${height};
@@ -22,6 +23,7 @@ export default (mode: string = 'dark') => {
             bodySize: '1rem',
             headingLineHeight: 1,
             bodyLineHeight: 1.2
-        }
+        },
+        awesomegrid
     }
 };

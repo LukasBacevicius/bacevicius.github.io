@@ -1,44 +1,38 @@
 import React, { FC } from 'react';
 import { Route, Switch } from 'react-router';
 import { useSelector, useDispatch } from 'react-redux';
-import { ThemeProvider } from 'styled-components';
-import { createGlobalStyle } from 'styled-components';
-import { Reset } from 'styled-reset'
-import theme from './theme';
+import { Container } from 'react-awesome-styled-grid';
 import { stateProps } from './reducers';
 import { isDarkMode } from './utils/theme';
 import { setMode } from './actions/theme';
 import Main from './containers/Main';
 import { LightsOff } from './components/LightsOff';
-
-const GlobalStyles = createGlobalStyle`
-  html {
-    font-size: 16px;
-  }
-  
-  body {
-    background: ${({ theme }) => theme.color('background')};
-  }
-`;
+import PageWrapper from './components/PageWrapper';
+import StylesBootstrap from './styles/bootstrap';
 
 const App: FC = () => {
+  /* 
+    TODO: Create navigation container and move this there
+  */
   const mode = useSelector(({ theme }: stateProps) => theme.mode);
   const dispatch = useDispatch();
 
   return (
-    <ThemeProvider theme={theme(mode)}>
-      <>
-        <Reset />
-        <GlobalStyles />
+    <StylesBootstrap>
+      {/* TEMP */}
+      <Container>
         <LightsOff
           checked={isDarkMode(mode)}
           onClick={() => dispatch(setMode())}
         />
+      </Container>
+      {/* END TEMP */}
+      <PageWrapper>
         <Switch>
           <Route path="/" component={Main} />
         </Switch>
-      </>
-    </ThemeProvider>
+      </PageWrapper>
+    </StylesBootstrap>
   )
 };
 
