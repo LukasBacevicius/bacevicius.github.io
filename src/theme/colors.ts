@@ -7,8 +7,8 @@ export default {
             90: '#fff'
         },
         {
-            100: '#000',
-            90: '#202326'
+            100: '#252935',
+            90: '#2C3040'
         }
     ),
     grayscale: getColorObject(
@@ -31,6 +31,13 @@ export default {
             0: '#000'
         }
     ),
+    typography: getColorObject(
+        {
+            100: '#2C3040'
+        },
+        {
+            100: '#fff'
+        }),
     blue: getColorObject({
         100: '#0D74FF',
         50: '#D9E7FD'

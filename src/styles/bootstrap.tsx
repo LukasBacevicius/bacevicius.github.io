@@ -2,12 +2,23 @@ import React, { FC } from 'react';
 import { useSelector } from 'react-redux';
 import { createGlobalStyle, ThemeProvider } from 'styled-components';
 import { Reset } from 'styled-reset';
+//@ts-ignore 
+import breakpoint from 'styled-components-breakpoint';
 import theme from '../theme';
 import { stateProps } from '../reducers';
 
 const GlobalStyles = createGlobalStyle`
   html {
-    font-size: 16px;
+    font-size: 12px;
+
+    ${breakpoint('sm')`
+      font-size: 14px;
+    `}
+
+    ${breakpoint('md')`
+      font-size: 16px;
+    `}
+
   }
   
   body {

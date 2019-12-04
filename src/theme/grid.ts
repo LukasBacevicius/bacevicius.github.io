@@ -23,7 +23,7 @@ export default {
     container: {
         xs: 'full', // 'full' = max-width: 100%
         sm: 'full', // 'full' = max-width: 100%
-        md: 'full', // 'full' = max-width: 100%
+        md: 60, // 'full' = max-width: 100%
         lg: 60, // max-width: 1440px
         xl: 60, // max-width: 1440px
     },

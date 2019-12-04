@@ -11,7 +11,8 @@ const acceptedStyleProps = [
 ]
 
 const BaseStyledType = styled.div`
-    color: ${({ theme }) => theme.color('grayscale', 100)};
+    color: ${({ theme }) => theme.color('typography', 100)};
+
     ${props => {
         return Object.keys(props).map(key => {
             if (!acceptedStyleProps.includes(key)) return '';

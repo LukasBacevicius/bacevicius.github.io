@@ -3,6 +3,7 @@ import awesomegrid from './grid';
 import transitions from './transitions';
 import decorations from './decorations';
 import typography from './typography';
+import breakpoints from './breakpoints';
 import * as helpers from './helpers';
 
 export default (mode: string = 'dark') => ({
@@ -12,5 +13,6 @@ export default (mode: string = 'dark') => ({
     helpers,
     transitions,
     decorations,
-    typography
+    typography,
+    breakpoints
 });
