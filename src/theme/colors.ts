@@ -7,8 +7,8 @@ export default {
             90: '#fff'
         },
         {
-            100: '#0D0D0D',
-            90: '#191919'
+            100: '#000',
+            90: '#202326'
         }
     ),
     grayscale: getColorObject(

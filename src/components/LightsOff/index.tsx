@@ -5,9 +5,6 @@ const ID = 'LightsOff';
 
 const Checkbox = styled.input`
     display: none;
-
-    &:checked + [for="${ID}"] {
-    }
 `;
 
 const Label = styled.label`
@@ -17,8 +14,15 @@ const Label = styled.label`
     justify-content: center;
     align-items: center;
     font-size: 1.2rem;
+    position: absolute;
+    right: 1rem;
+    bottom: 1rem;
+    background: ${({ theme }) => theme.color('background', 90)};
+    box-shadow: ${({ theme }) => theme.decorations.shadows.default};
+    border-radius: .2rem;
+    font-size: 1rem;
 
-    ${({ theme }) => theme.setDimensions('3rem')}
+    ${({ theme }) => theme.helpers.setDimensions('2.2rem')}
 `;
 
 export const LightsOff = ({ onClick, checked }: { onClick?: () => void; checked?: boolean; }) => (
@@ -28,7 +32,7 @@ export const LightsOff = ({ onClick, checked }: { onClick?: () => void; checked?
             defaultChecked={checked}
             id={ID}
         />
-        <Label onClick={onClick} htmlFor={ID}>
+        <Label onClick={onClick} htmlFor={ID} title="Activate light mode">
             <span role="img">
                 {!checked ? '🌙' : '☀️'}
             </span>

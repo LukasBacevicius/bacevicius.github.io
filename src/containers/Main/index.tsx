@@ -1,9 +1,11 @@
 import React, { FC } from 'react';
+import { Canon } from '../../components/Typography';
 
 const Main: FC = () => {
     return (
-        <h1>
-        </h1>
+        <Canon>
+            Hello World
+        </Canon>
     );
 };
 

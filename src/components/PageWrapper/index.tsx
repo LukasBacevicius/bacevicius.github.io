@@ -4,9 +4,9 @@ import styled from 'styled-components';
 
 const Decorator = styled.main`
   background: ${({ theme }) => theme.color('background', 90)};
+  box-shadow: ${({ theme }) => theme.decorations.shadows.default};
   margin: 4rem auto;
   padding: 5rem 2rem;
-  box-shadow: 0 30px 90px 0 rgba(31,36,48,.1);
 `;
 
 const PageWrapper: FC = ({ children }) => (

@@ -3,8 +3,19 @@ import 'styled-components';
 /* TODO: missing types */
 declare module 'styled-components' {
     export interface DefaultTheme {
-        colors: {},
         color: (name: string, tint?: number) => string | undefined;
-        setDimensions: (width: string, height?: string) => string;
+        helpers: {
+            setDimensions: (width: string, height?: string) => string;
+            toRem: (pxValue: number) => string | undefined;
+        };
+        transitions: {
+            default: (toAnimate: Array<string>, duration?: string) => string;
+        };
+        decorations: {
+            shadows: {
+                default: string;
+            }
+        };
+        typography: {};
     }
 }
