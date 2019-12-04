@@ -71,9 +71,9 @@ export const Paragon: FC = ({ children, ...props }: any) => (
     </TypeWithContext>
 );
 
-export const DoublePice: FC = ({ children, ...props }: any) => (
+export const DoublePica: FC = ({ children, ...props }: any) => (
     <TypeWithContext
-        type="DoublePice"
+        type="DoublePica"
         {...props}
     >
         {children}
