@@ -9,7 +9,7 @@ import { stateProps } from '../reducers';
 
 const GlobalStyles = createGlobalStyle`
   html {
-    font-size: 12px;
+    font-size: 10px;
 
     ${breakpoint('sm')`
       font-size: 14px;
