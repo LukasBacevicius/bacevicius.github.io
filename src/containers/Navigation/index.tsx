@@ -5,13 +5,18 @@ import { useSelector, useDispatch } from 'react-redux';
 import { stateProps } from '../../reducers';
 import { isDarkMode, changeMode } from '../../utils/theme';
 import { setMode } from '../../actions/theme';
+import { ReactComponent as Logo } from '../../icons/logo.svg';
 import styled from 'styled-components';
 
 const Navigation = styled(Container)`
-    height: 6rem;
+    height: 11rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
+`;
+
+const StyledLogo = styled(Logo)`
+    height: 7rem;
 `;
 
 export default () => {
@@ -23,7 +28,10 @@ export default () => {
     return (
         <Navigation>
             <Row justify='flex-end'>
-                <Col xs={2} justify='flex-end'>
+                <Col align="center">
+                    <StyledLogo />
+                </Col>
+                <Col xs={2} justify='flex-end' align="center">
                     <LightsOff
                         checked={isDarkMode(mode)}
                         onClick={toggleMode}
