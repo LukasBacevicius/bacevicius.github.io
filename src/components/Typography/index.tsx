@@ -24,7 +24,7 @@ const BaseStyledType = styled.div`
 `;
 
 const TypeWithContext: FC<{ type: string }> = ({ children, type, ...props }) => {
-    const { typography }: any = useContext(ThemeContext);
+    const { typography: { styles: typography } }: any = useContext(ThemeContext);
 
     const {
         tag,

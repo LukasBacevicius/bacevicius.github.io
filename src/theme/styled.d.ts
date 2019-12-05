@@ -9,13 +9,16 @@ declare module 'styled-components' {
             toRem: (pxValue: number) => string | undefined;
         };
         transitions: {
-            default: (toAnimate: Array<string>, duration?: string) => string;
+            default: (toAnimate?: Array<string>, duration?: string) => string;
         };
         decorations: {
             shadows: {
                 default: string;
             }
         };
-        typography: {};
+        typography: {
+            styles: {}
+            fontFamily: string;
+        };
     }
 }

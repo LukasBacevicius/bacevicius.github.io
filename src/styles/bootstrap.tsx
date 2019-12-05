@@ -6,9 +6,12 @@ import { Reset } from 'styled-reset';
 import breakpoint from 'styled-components-breakpoint';
 import theme from '../theme';
 import { stateProps } from '../reducers';
+import { MODE_CHANGE_CLASS } from '../utils/theme'
 
 const GlobalStyles = createGlobalStyle`
   html {
+    font-family: ${({ theme }) => theme.typography.fontFamily};
+    color: ${({ theme }) => theme.color('typography')}
     font-size: 10px;
 
     ${breakpoint('sm')`
@@ -26,6 +29,10 @@ const GlobalStyles = createGlobalStyle`
     display: flex;
     min-height: 100vh;
     flex-direction: column;
+
+    &.${MODE_CHANGE_CLASS} {
+      transition: ${({ theme }) => theme.transitions.default()};
+    }
   }
 
   #root {

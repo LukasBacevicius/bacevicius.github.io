@@ -5,6 +5,7 @@ import styled from 'styled-components';
 
 const Text = styled(Canon)`
     padding: 3rem 2rem;
+    margin-bottom: 2rem;
     font-weight: bold;
     text-transform: uppercase;
 `;

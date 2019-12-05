@@ -4,7 +4,7 @@ import { Canon, Paragon } from '../../components/Typography';
 import styled from 'styled-components';
 
 const StyledContainer = styled(Container)`
-    padding: 8rem 0 0;
+    padding: 4rem 0 2rem;
 `;
 
 const StyledCanon = styled(Canon)`
