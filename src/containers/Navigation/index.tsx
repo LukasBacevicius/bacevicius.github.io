@@ -31,7 +31,7 @@ export default () => {
                 <Col align="center">
                     <StyledLogo />
                 </Col>
-                <Col xs={2} justify='flex-end' align="center">
+                <Col xs={2} justify='flex-end'>
                     <LightsOff
                         checked={isDarkMode(mode)}
                         onClick={toggleMode}
