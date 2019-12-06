@@ -6,7 +6,7 @@ import { Reset } from 'styled-reset';
 import breakpoint from 'styled-components-breakpoint';
 import theme from '../theme';
 import { stateProps } from '../reducers';
-import { MODE_CHANGE_CLASS } from '../utils/theme'
+import { MODE_CHANGE_CLASS, MODE_ANIMATE_CLASS } from '../utils/theme'
 
 const GlobalStyles = createGlobalStyle`
   html {
@@ -30,7 +30,8 @@ const GlobalStyles = createGlobalStyle`
     min-height: 100vh;
     flex-direction: column;
 
-    &.${MODE_CHANGE_CLASS} {
+    &.${MODE_CHANGE_CLASS},
+    &.${MODE_CHANGE_CLASS} .${MODE_ANIMATE_CLASS} {
       transition: ${({ theme }) => theme.transitions.default()};
     }
   }

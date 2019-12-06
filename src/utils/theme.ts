@@ -2,6 +2,7 @@ export const MODE_DARK = 'dark';
 export const MODE_LIGHT = 'light';
 
 export const MODE_CHANGE_CLASS = '--theme-change';
+export const MODE_ANIMATE_CLASS = '--animate-theme-change';
 
 export const userPreferredMode = () => window.matchMedia('(prefers-color-scheme: dark)').matches ? MODE_DARK : MODE_LIGHT;
 

@@ -1,33 +1,29 @@
-import React, { FC } from 'react';
-import PageWrapper from '../../components/PageWrapper';
-import { Hero } from '../../components/Hero';
-import { Section } from '../../components/Section';
-import { Card } from '../../components/Card';
-import { ReachOut } from '../../components/ReachOut';
+import React, { FC, useContext } from "react";
+import PageWrapper from "../../components/PageWrapper";
+import { Hero } from "../../components/Hero";
+import { Section } from "../../components/Section";
+import { Card } from "../../components/Card";
+import { ReachOut } from "../../components/ReachOut";
+
+import { HeroContext, TickerContext } from "../../contextProviders";
 
 const Main: FC = () => {
-    return (
-        <>
-            <Hero
-                headline={'Hello! Hej! Labas!'}
-                emoji={{
-                    label: 'Hello',
-                    value: '👋'
-                }}
-                paragraphs={[
-                    `I'm Lukas — a Copenhagen based frontend engineer, currently changing stuff and seeing what happens at Valtech.`
-                ]}
-            />
-            <ReachOut value="Hire Me! 📢" />
-            <PageWrapper>
-                <Section title={'Experience'}>
-                    <dt>
-                        <Card />
-                    </dt>
-                </Section>
-            </PageWrapper>
-        </>
-    );
+  const { headline, emoji, paragraphs } = useContext(HeroContext);
+  const { title, link } = useContext(TickerContext);
+
+  return (
+    <>
+      <Hero headline={headline} emoji={emoji} paragraphs={paragraphs} />
+      <ReachOut title={title} link={link} />
+      <PageWrapper>
+        <Section title={"Experience"}>
+          <dt>
+            <Card />
+          </dt>
+        </Section>
+      </PageWrapper>
+    </>
+  );
 };
 
-export default Main; 
+export default Main;
