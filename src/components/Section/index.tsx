@@ -17,7 +17,7 @@ export const Section: FC<{ title: string }> = ({ title, children }) => (
     <StyledSection>
         <Title>
             <Col xs={4}>
-                <Trafalgar>
+                <Trafalgar fontWeight={800}>
                     {title}
                 </Trafalgar>
             </Col>

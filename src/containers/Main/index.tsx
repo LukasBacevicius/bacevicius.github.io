@@ -5,21 +5,33 @@ import { Section } from "../../components/Section";
 import { Card } from "../../components/Card";
 import { ReachOut } from "../../components/ReachOut";
 
-import { HeroContext, TickerContext } from "../../contextProviders";
+import {
+  HeroContext,
+  TickerContext,
+  ExperienceContext
+} from "../../contextProviders";
 
 const Main: FC = () => {
   const { headline, emoji, paragraphs } = useContext(HeroContext);
   const { title, link } = useContext(TickerContext);
+  const experience = useContext(ExperienceContext);
 
   return (
     <>
       <Hero headline={headline} emoji={emoji} paragraphs={paragraphs} />
       <ReachOut title={title} link={link} />
       <PageWrapper>
-        <Section title={"Experience"}>
-          <dt>
-            <Card />
-          </dt>
+        <Section title={experience.title}>
+          {experience.items.map(
+            ({ period, position, description, company }) => (
+              <Card
+                period={period}
+                position={position}
+                description={description}
+                company={company}
+              />
+            )
+          )}
         </Section>
       </PageWrapper>
     </>

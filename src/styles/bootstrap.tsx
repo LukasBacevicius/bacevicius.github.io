@@ -11,8 +11,8 @@ import { MODE_CHANGE_CLASS, MODE_ANIMATE_CLASS } from '../utils/theme'
 const GlobalStyles = createGlobalStyle`
   html {
     font-family: ${({ theme }) => theme.typography.fontFamily};
-    color: ${({ theme }) => theme.color('typography')}
-    font-size: 10px;
+    color: ${({ theme }) => theme.color('typography')};
+    font-size: 12px;
 
     ${breakpoint('sm')`
       font-size: 14px;
@@ -32,7 +32,7 @@ const GlobalStyles = createGlobalStyle`
 
     &.${MODE_CHANGE_CLASS},
     &.${MODE_CHANGE_CLASS} .${MODE_ANIMATE_CLASS} {
-      transition: ${({ theme }) => theme.transitions.default()};
+      transition: ${({ theme }) => theme.transitions.default(['background, background-color'])};
     }
   }
 

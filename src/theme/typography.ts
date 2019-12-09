@@ -42,7 +42,7 @@ export default {
         },
         BodyCopy: {
             tag: 'p',
-            fontSize: toRem(16),
+            fontSize: toRem(18),
             fontWeight: 400,
             lineHeight: toRem(22),
             fontFamily,

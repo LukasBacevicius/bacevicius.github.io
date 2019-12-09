@@ -1,14 +1,18 @@
 import React, { FC } from 'react';
 import { Container, Row, Col } from 'react-awesome-styled-grid';
-import { Canon, Paragon } from '../../components/Typography';
+import { Canon, DoublePica } from '../../components/Typography';
 import styled from 'styled-components';
 
 const StyledContainer = styled(Container)`
-    padding: 4rem 0 2rem;
+    padding: 4rem 0 0;
 `;
 
 const StyledCanon = styled(Canon)`
     margin-bottom: 2rem;
+`;
+
+const Paragraph = styled(DoublePica)`
+        margin-bottom: 2rem;
 `;
 
 /* 
@@ -51,10 +55,10 @@ export const Hero: FC<{ headline: any, paragraphs: Array<string>, emoji?: { labe
         {
             paragraphs.map(paragraph => (
                 <Row>
-                    <Col xs={3}>
-                        <Paragon>
+                    <Col xs={4}>
+                        <Paragraph>
                             {paragraph}
-                        </Paragon>
+                        </Paragraph>
                     </Col>
                 </Row>
             ))

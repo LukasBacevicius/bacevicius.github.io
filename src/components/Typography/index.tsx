@@ -11,8 +11,6 @@ const acceptedStyleProps = [
 ]
 
 const BaseStyledType = styled.div`
-    color: ${({ theme }) => theme.color('typography', 100)};
-
     ${props => {
         return Object.keys(props).map(key => {
             if (!acceptedStyleProps.includes(key)) return '';
@@ -20,6 +18,10 @@ const BaseStyledType = styled.div`
             return `${key.replace(/([a-z0-9]|(?=[A-Z]))([A-Z])/g, '$1-$2').toLowerCase()}: ${props[key]};`
         }).join('');
     }
+    }
+
+    small {
+        font-size: 70%;
     }
 `;
 
@@ -53,7 +55,7 @@ export const Canon: FC<any> = ({ children, ...props }: any) => (
     </TypeWithContext>
 );
 
-export const Trafalgar: FC = ({ children, ...props }: any) => (
+export const Trafalgar: FC<any> = ({ children, ...props }: any) => (
     <TypeWithContext
         type="Trafalgar"
         {...props}
@@ -62,7 +64,7 @@ export const Trafalgar: FC = ({ children, ...props }: any) => (
     </TypeWithContext>
 );
 
-export const Paragon: FC = ({ children, ...props }: any) => (
+export const Paragon: FC<any> = ({ children, ...props }: any) => (
     <TypeWithContext
         type="Paragon"
         {...props}
@@ -71,7 +73,7 @@ export const Paragon: FC = ({ children, ...props }: any) => (
     </TypeWithContext>
 );
 
-export const DoublePica: FC = ({ children, ...props }: any) => (
+export const DoublePica: FC<any> = ({ children, ...props }: any) => (
     <TypeWithContext
         type="DoublePica"
         {...props}
@@ -80,7 +82,7 @@ export const DoublePica: FC = ({ children, ...props }: any) => (
     </TypeWithContext>
 );
 
-export const GreatPrimer: FC = ({ children, ...props }: any) => (
+export const GreatPrimer: FC<any> = ({ children, ...props }: any) => (
     <TypeWithContext
         type="GreatPrimer"
         {...props}
@@ -89,7 +91,7 @@ export const GreatPrimer: FC = ({ children, ...props }: any) => (
     </TypeWithContext>
 );
 
-export const BodyCopy: FC = ({ children, ...props }: any) => (
+export const BodyCopy: FC<any> = ({ children, ...props }: any) => (
     <TypeWithContext
         type="BodyCopy"
         {...props}
@@ -98,7 +100,7 @@ export const BodyCopy: FC = ({ children, ...props }: any) => (
     </TypeWithContext>
 );
 
-export const Brevier: FC = ({ children, ...props }: any) => (
+export const Brevier: FC<any> = ({ children, ...props }: any) => (
     <TypeWithContext
         type="Brevier"
         {...props}
