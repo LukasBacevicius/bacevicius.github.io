@@ -2,12 +2,18 @@ import React, { FC } from "react";
 import { Container } from "react-awesome-styled-grid";
 import styled from "styled-components";
 import { MODE_ANIMATE_CLASS } from "../../utils/theme";
+import breakpoint from "styled-components-breakpoint";
 
 const Decorator = styled.main`
   background: ${({ theme }) => theme.color("background", 90)};
   box-shadow: ${({ theme }) => theme.decorations.shadows.default};
   margin: 0 auto 4rem;
-  padding: 3rem 2rem;
+
+  padding: 4rem 1rem 2rem;
+
+  ${breakpoint("md")`
+    padding: 4rem 2rem 1.1rem;
+  `}
 `;
 
 const PageWrapper: FC = ({ children }) => (

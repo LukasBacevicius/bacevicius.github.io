@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-//@ts-ignore
 import breakpoint from "styled-components-breakpoint";
 
 const ID = "LightsOff";

@@ -5,7 +5,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { stateProps } from '../../reducers';
 import { isDarkMode, changeMode } from '../../utils/theme';
 import { setMode } from '../../actions/theme';
-import { ReactComponent as Logo } from '../../icons/logo.svg';
+import { ReactComponent as Logo } from '../../images/logo.svg';
 import styled from 'styled-components';
 
 const Navigation = styled(Container)`

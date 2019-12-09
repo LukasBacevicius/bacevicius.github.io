@@ -23,12 +23,12 @@ const Main: FC = () => {
       <PageWrapper>
         <Section title={experience.title}>
           {experience.items.map(
-            ({ period, position, description, company }) => (
+            ({ period, title, description, institution }) => (
               <Card
                 period={period}
-                position={position}
+                title={title}
                 description={description}
-                company={company}
+                institution={institution}
               />
             )
           )}

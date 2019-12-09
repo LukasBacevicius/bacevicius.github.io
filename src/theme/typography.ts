@@ -8,7 +8,7 @@ export default {
         Canon: {
             tag: 'h1',
             fontSize: toRem(52),
-            fontWeight: 800,
+            fontWeight: 900,
             lineHeight: toRem(56),
             fontFamily,
         },

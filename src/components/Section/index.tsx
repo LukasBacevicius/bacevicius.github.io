@@ -1,13 +1,13 @@
 import React, { FC } from 'react';
 import { Container, Row, Col } from 'react-awesome-styled-grid';
 import styled from 'styled-components';
-import { Trafalgar } from '../Typography';
+import { Canon } from '../Typography';
 
 const StyledSection = styled(Container)`
 `;
 
 const Title = styled(Row)`
-    margin-bottom: 2rem;
+    margin-bottom: 3.5rem;
 `;
 
 const Content = styled.dl`
@@ -17,9 +17,9 @@ export const Section: FC<{ title: string }> = ({ title, children }) => (
     <StyledSection>
         <Title>
             <Col xs={4}>
-                <Trafalgar fontWeight={800}>
+                <Canon tag={'h2'} fontSize={'2.85rem'}>
                     {title}
-                </Trafalgar>
+                </Canon>
             </Col>
         </Title>
         <Content>
