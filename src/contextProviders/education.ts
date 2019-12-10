@@ -2,7 +2,10 @@ import { createContext } from 'react';
 import { ReactComponent as KeaLogo } from '../images/kea.svg';
 
 export const EducationContext = createContext({
-  title: 'Education 📚',
+  title: {
+    value: 'Education',
+    icon: '📚',
+  },
   items: [
       {
           period: {

@@ -1,30 +1,36 @@
-import React, { FC } from 'react';
-import { Container, Row, Col } from 'react-awesome-styled-grid';
-import styled from 'styled-components';
-import { Canon } from '../Typography';
+import React, { FC } from "react";
+import { Container, Row, Col } from "react-awesome-styled-grid";
+import styled from "styled-components";
+import { Trafalgar } from "../Typography";
 
 const StyledSection = styled(Container)`
-    margin-bottom: 4rem;
+  & + div {
+    margin-top: 5rem;
+  }
 `;
 
 const Title = styled(Row)`
-    margin-bottom: 3.5rem;
+  margin-bottom: 2rem;
+
+  span {
+    font-weight: normal;
+  }
 `;
 
-const Content = styled.dl`
-`;
+const Content = styled.dl``;
 
-export const Section: FC<{ title: string }> = ({ title, children }) => (
-    <StyledSection>
-        <Title>
-            <Col xs={4}>
-                <Canon tag={'h2'} fontSize={'2.85rem'}>
-                    {title}
-                </Canon>
-            </Col>
-        </Title>
-        <Content>
-            {children}
-        </Content>
-    </StyledSection>
+export const Section: FC<{ title: { value: string; icon: string } }> = ({
+  title,
+  children
+}) => (
+  <StyledSection>
+    <Title>
+      <Col xs={4}>
+        <Trafalgar tag={"h2"}>
+          {title.value} <span role="img">{title.icon}</span>
+        </Trafalgar>
+      </Col>
+    </Title>
+    <Content>{children}</Content>
+  </StyledSection>
 );

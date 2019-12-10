@@ -6,7 +6,10 @@ import { ReactComponent as SuperbLogo } from '../images/superb.svg';
 
 
 export const ExperienceContext = createContext({
-  title: 'Experience 👔',
+  title: {
+      value: 'Experience',
+      icon: '🛠️',
+  },
   items: [
       {
           period: {

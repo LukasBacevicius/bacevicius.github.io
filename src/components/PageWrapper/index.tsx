@@ -9,10 +9,10 @@ const Decorator = styled.main`
   box-shadow: ${({ theme }) => theme.decorations.shadows.default};
   margin: 0 auto 4rem;
 
-  padding: 4rem 1rem 2rem;
+  padding: 4rem 1rem 4rem;
 
   ${breakpoint("md")`
-    padding: 4rem 2rem 1.1rem;
+    padding: 4rem 2rem 4rem;
   `}
 `;
 

@@ -8,14 +8,14 @@ export default {
         Canon: {
             tag: 'h1',
             fontSize: toRem(52),
-            fontWeight: 900,
+            fontWeight: 800,
             lineHeight: toRem(56),
             fontFamily,
         },
         Trafalgar: {
             tag: 'h1',
             fontSize: toRem(36),
-            fontWeight: 600,
+            fontWeight: 800,
             lineHeight: toRem(40),
             fontFamily,
         },
