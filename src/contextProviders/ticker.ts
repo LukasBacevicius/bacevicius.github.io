@@ -1,6 +1,6 @@
 import { createContext } from 'react';
 
 export const TickerContext = createContext({
-    title: 'Get in touch! 📢',
+    title: 'OPEN FOR NEW OPPORTUNITIES! 📢',
     link: 'mailto:lukasbacevicius@gmail.com'
 });

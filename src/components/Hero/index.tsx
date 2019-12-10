@@ -53,8 +53,8 @@ export const Hero: FC<{ headline: any, paragraphs: Array<string>, emoji?: { labe
             </Col>
         </Row>
         {
-            paragraphs.map(paragraph => (
-                <Row>
+            paragraphs.map((paragraph, index) => (
+                <Row key={index}>
                     <Col xs={4}>
                         <Paragraph>
                             {paragraph}

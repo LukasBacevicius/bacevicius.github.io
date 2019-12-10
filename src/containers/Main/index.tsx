@@ -23,11 +23,12 @@ const Main: FC = () => {
       <Hero headline={headline} emoji={emoji} paragraphs={paragraphs} />
       <ReachOut title={title} link={link} />
       <PageWrapper>
-        {[experience, education].map(section => (
-          <Section title={section.title}>
+        {[experience, education].map((section, indexSection) => (
+          <Section title={section.title} key={indexSection}>
             {section.items.map(
-              ({ period, title, description, institution }) => (
+              ({ period, title, description, institution }, indexCard) => (
                 <Card
+                  key={indexCard}
                   period={period}
                   title={title}
                   description={description}

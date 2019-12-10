@@ -8,13 +8,17 @@ const Text = styled(Canon)`
   margin-bottom: 2rem;
   font-weight: bold;
   text-transform: uppercase;
+  white-space: nowrap;
 `;
 
 const Link = styled.a`
   color: ${({ theme }) => theme.color("typography")};
 `;
 
-export const ReachOut: FC<{ title: string, link: string }> = ({ title, link }) => (
+export const ReachOut: FC<{ title: string; link: string }> = ({
+  title,
+  link
+}) => (
   <Ticker>
     <Link href={link}>
       <Text fontSize={"2.5rem"}>{title}</Text>

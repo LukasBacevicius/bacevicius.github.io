@@ -63,10 +63,10 @@ export const LightsOff = ({
   <>
     <Checkbox type="checkbox" defaultChecked={checked} id={ID} />
     <Label onClick={onClick} htmlFor={ID} title="Activate light mode">
-      <span role="img" arial-label="Light mode">
+      <span role="img" aria-label="Light mode">
         ☀️
       </span>
-      <span role="img" arial-label="Dark mode">
+      <span role="img" aria-label="Dark mode">
         🌙
       </span>
     </Label>
