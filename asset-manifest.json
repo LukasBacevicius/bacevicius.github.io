@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.js": "/static/js/main.e60cc929.chunk.js",
-    "main.js.map": "/static/js/main.e60cc929.chunk.js.map",
+    "main.js": "/static/js/main.b84b45fd.chunk.js",
+    "main.js.map": "/static/js/main.b84b45fd.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.6c35fbf9.js",
     "runtime-main.js.map": "/static/js/runtime-main.6c35fbf9.js.map",
-    "static/js/2.33948382.chunk.js": "/static/js/2.33948382.chunk.js",
-    "static/js/2.33948382.chunk.js.map": "/static/js/2.33948382.chunk.js.map",
+    "static/js/2.f03277cb.chunk.js": "/static/js/2.f03277cb.chunk.js",
+    "static/js/2.f03277cb.chunk.js.map": "/static/js/2.f03277cb.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.d40c444a39924c70fab27b05016815b3.js": "/precache-manifest.d40c444a39924c70fab27b05016815b3.js",
+    "precache-manifest.ed7801bc4fe567ad58c8a38c3bedc47d.js": "/precache-manifest.ed7801bc4fe567ad58c8a38c3bedc47d.js",
     "service-worker.js": "/service-worker.js",
     "static/media/cabana.202cfa4f.svg": "/static/media/cabana.202cfa4f.svg",
-    "static/media/kea.d79f30a5.svg": "/static/media/kea.d79f30a5.svg",
+    "static/media/kea.5db2fed6.svg": "/static/media/kea.5db2fed6.svg",
     "static/media/logo.eca97e9d.svg": "/static/media/logo.eca97e9d.svg",
     "static/media/mono.22095313.svg": "/static/media/mono.22095313.svg",
     "static/media/superb.9b0e77e2.svg": "/static/media/superb.9b0e77e2.svg",
@@ -18,7 +18,7 @@
   },
   "entrypoints": [
     "static/js/runtime-main.6c35fbf9.js",
-    "static/js/2.33948382.chunk.js",
-    "static/js/main.e60cc929.chunk.js"
+    "static/js/2.f03277cb.chunk.js",
+    "static/js/main.b84b45fd.chunk.js"
   ]
 }

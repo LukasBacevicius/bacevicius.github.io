@@ -1,15 +1,15 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "c979fea0ee5ce85fafbd331a0568082c",
+    "revision": "7aa2100add174ad1438b075386eaa3a5",
     "url": "/index.html"
   },
   {
-    "revision": "f07f51c59bd60f947d62",
-    "url": "/static/js/2.33948382.chunk.js"
+    "revision": "75e472a135dff979567f",
+    "url": "/static/js/2.f03277cb.chunk.js"
   },
   {
-    "revision": "8c647af6c17f4554c724",
-    "url": "/static/js/main.e60cc929.chunk.js"
+    "revision": "9fb38de858609538a6f5",
+    "url": "/static/js/main.b84b45fd.chunk.js"
   },
   {
     "revision": "29b7f161e807e301a4d6",
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/cabana.202cfa4f.svg"
   },
   {
-    "revision": "d79f30a57a50ca60deec94411a4a0e9e",
-    "url": "/static/media/kea.d79f30a5.svg"
+    "revision": "5db2fed692569c94726406a65e4ef507",
+    "url": "/static/media/kea.5db2fed6.svg"
   },
   {
     "revision": "eca97e9d24ba08e491adf49f28d5b7a3",
