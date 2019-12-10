@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import { Canon } from '../Typography';
 
 const StyledSection = styled(Container)`
+    margin-bottom: 4rem;
 `;
 
 const Title = styled(Row)`

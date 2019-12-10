@@ -8,31 +8,35 @@ import { ReachOut } from "../../components/ReachOut";
 import {
   HeroContext,
   TickerContext,
-  ExperienceContext
+  ExperienceContext,
+  EducationContext
 } from "../../contextProviders";
 
 const Main: FC = () => {
   const { headline, emoji, paragraphs } = useContext(HeroContext);
   const { title, link } = useContext(TickerContext);
   const experience = useContext(ExperienceContext);
+  const education = useContext(EducationContext);
 
   return (
     <>
       <Hero headline={headline} emoji={emoji} paragraphs={paragraphs} />
       <ReachOut title={title} link={link} />
       <PageWrapper>
-        <Section title={experience.title}>
-          {experience.items.map(
-            ({ period, title, description, institution }) => (
-              <Card
-                period={period}
-                title={title}
-                description={description}
-                institution={institution}
-              />
-            )
-          )}
-        </Section>
+        {[experience, education].map(section => (
+          <Section title={section.title}>
+            {section.items.map(
+              ({ period, title, description, institution }) => (
+                <Card
+                  period={period}
+                  title={title}
+                  description={description}
+                  institution={institution}
+                />
+              )
+            )}
+          </Section>
+        ))}
       </PageWrapper>
     </>
   );
