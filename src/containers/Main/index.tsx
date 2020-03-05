@@ -23,19 +23,11 @@ const Main: FC = () => {
       <Hero headline={headline} emoji={emoji} paragraphs={paragraphs} />
       <ReachOut title={title} link={link} />
       <PageWrapper>
-        {[experience, education].map((section, indexSection) => (
-          <Section title={section.title} key={indexSection}>
-            {section.items.map(
-              ({ period, title, description, institution }, indexCard) => (
-                <Card
-                  key={indexCard}
-                  period={period}
-                  title={title}
-                  description={description}
-                  institution={institution}
-                />
-              )
-            )}
+        {[experience, education].map(({ items, title } : { items: Array<any>; title: any}, indexSection) => (
+          <Section title={title} key={indexSection}>
+            {items.map((props: any, indexCard: any) => (
+              <Card key={indexCard} {...props} />
+            ))}
           </Section>
         ))}
       </PageWrapper>

@@ -13,7 +13,7 @@ export const EducationContext = createContext({
               end: 'December, 2016'
           },
           title: `Bachelor's degree, Web Development`,
-          description: '',
+          description: [],
           institution: {
             name: 'KEA - Københavns Erhvervsakademi',
             logo: KeaLogo,
@@ -26,7 +26,7 @@ export const EducationContext = createContext({
             end: 'June, 2015'
         },
         title: `AP degree, Multimedia Design and Communication`,
-        description: '',
+        description: [],
         institution: {
             name: 'KEA - Københavns Erhvervsakademi',
             logo: KeaLogo,

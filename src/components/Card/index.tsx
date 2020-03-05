@@ -1,6 +1,14 @@
 import React, { FC } from "react";
-import { BodyCopy } from "../Typography";
-import { Wrapper, ColStart, ColEnd, Period, Title, LogoLink } from "./styles";
+import {
+  Wrapper,
+  ColStart,
+  ColEnd,
+  Period,
+  Title,
+  LogoLink,
+  Description,
+  Subtitle
+} from "./styles";
 
 export type CardProps = {
   period: {
@@ -8,19 +16,21 @@ export type CardProps = {
     end?: string;
   };
   title?: string;
-  description?: string;
+  description?: Array<string>;
   institution: {
     name: string;
     logo: FC;
     url: string;
   };
+  subtitle: string;
 };
 
 export const Card: FC<CardProps> = ({
   period,
   title,
-  description,
-  institution
+  description = [],
+  institution,
+  subtitle
 }) => (
   <Wrapper>
     <ColStart>
@@ -38,6 +48,9 @@ export const Card: FC<CardProps> = ({
         <institution.logo aria-hidden />
       </LogoLink>
     </ColEnd>
-    <BodyCopy>{description}</BodyCopy>
+    <Subtitle fontWeight={"bold"}>{subtitle}</Subtitle>
+    {description.map((item, index) => (
+      <Description key={index}>{item}</Description>
+    ))}
   </Wrapper>
 );
