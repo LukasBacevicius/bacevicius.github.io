@@ -21,7 +21,7 @@ const Main: FC = () => {
   return (
     <>
       <Hero headline={headline} emoji={emoji} paragraphs={paragraphs} />
-      <ReachOut title={title} link={link} />
+   
       <PageWrapper>
         {[experience, education].map(({ items, title } : { items: Array<any>; title: any}, indexSection) => (
           <Section title={title} key={indexSection}>
