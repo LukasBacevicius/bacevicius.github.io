@@ -7,6 +7,5 @@ export const HeroContext = createContext({
         value: '👋'
     },
     paragraphs: [
-        `I'm Lukas — a Copenhagen based frontend engineer, currently changing stuff and seeing what happens at Valtech.`,
     ]
 });
